@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="한국 전통 건축 3D 체험 프로그램의 사용자용 공식 가이드 문서입니다."
+    />
+    <title>한국 전통 건축 3D 체험 프로그램 가이드</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="icon-button menu-toggle" type="button" aria-label="문서 메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#overview" aria-label="가이드 처음으로 이동">
+        <span class="brand-mark">韓</span>
+        <span class="brand-copy">
+          <strong>한국 전통 건축 3D 체험</strong>
+          <small>사용자 공식 가이드</small>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <span class="version-pill">Unity 6000.3.16f1 기준</span>
+        <button class="theme-toggle" type="button" aria-label="테마 변경">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">라이트</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="문서 목차">
+        <div class="sidebar-header">
+          <strong>Guide</strong>
+          <span>사용자용 공식 문서</span>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#overview" class="active">개요</a>
+          <a href="#interface">화면 구성</a>
+          <a href="#controls">기본 조작</a>
+          <a href="#library">모듈 라이브러리</a>
+          <a href="#editing">배치 편집</a>
+          <a href="#recommendation">추천 배치</a>
+          <a href="#capture">캡처</a>
+          <a href="#troubleshooting">문제 해결</a>
+          <a href="#scope">확인 범위</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="doc-section intro" id="overview" data-title="개요">
+          <p class="breadcrumb">한국 전통 건축 3D 체험 / 사용자 가이드</p>
+          <h1>한국 전통 건축 3D 체험 프로그램 가이드</h1>
+          <p class="lead">
+            이 문서는 한옥과 전통 건축 요소를 3D 공간에서 살펴보고, 모듈 라이브러리의
+            부재와 소품을 직접 배치해보는 사용자를 위한 공식 안내서입니다.
+          </p>
+          <figure class="doc-figure is-wide">
+            <img
+              src="assets/screenshots/workspace-overview.png"
+              alt="모듈 라이브러리, 3D 뷰포트, 배치 편집 패널이 함께 표시된 프로그램 실행 화면"
+            />
+            <figcaption>
+              실행 화면은 왼쪽 모듈 라이브러리, 중앙 3D 뷰포트, 오른쪽 배치 편집 패널로 구성됩니다.
+            </figcaption>
+          </figure>
+          <dl class="definition-list">
+            <div>
+              <dt>목적</dt>
+              <dd>전통 건축 요소를 공간 안에서 관찰하고 배치하며 구조와 분위기를 이해합니다.</dd>
+            </div>
+            <div>
+              <dt>대상</dt>
+              <dd>한국 전통 건축을 처음 접하는 사용자, 교육용 체험 자료가 필요한 사용자입니다.</dd>
+            </div>
+            <div>
+              <dt>기획 의도</dt>
+              <dd>텍스트와 이미지로는 전달하기 어려운 배치 관계를 직접 조작 가능한 3D 장면으로 보여줍니다.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="doc-section" id="interface" data-title="화면 구성">
+          <p class="eyebrow">Interface Guide</p>
+          <h2>화면 구성</h2>
+          <p>
+            실행 화면은 에셋을 고르는 영역, 장면을 보는 영역, 선택한 항목을 편집하는 영역으로 나뉩니다.
+            아래 번호를 기준으로 각 영역의 역할을 확인할 수 있습니다.
+          </p>
+          <figure class="annotated-figure">
+            <div class="annotation-stage">
+              <img
+                src="assets/screenshots/workspace-overview.png"
+                alt="번호가 표시된 한국 전통 건축 3D 체험 프로그램 화면 구성"
+              />
+              <span class="outline outline-1" aria-hidden="true"></span>
+              <span class="outline outline-2" aria-hidden="true"></span>
+              <span class="outline outline-3" aria-hidden="true"></span>
+              <span class="outline outline-4" aria-hidden="true"></span>
+              <span class="outline outline-5" aria-hidden="true"></span>
+              <span class="outline outline-6" aria-hidden="true"></span>
+              <span class="outline outline-7" aria-hidden="true"></span>
+              <span class="hotspot hotspot-1" aria-hidden="true">1</span>
+              <span class="hotspot hotspot-2" aria-hidden="true">2</span>
+              <span class="hotspot hotspot-3" aria-hidden="true">3</span>
+              <span class="hotspot hotspot-4" aria-hidden="true">4</span>
+              <span class="hotspot hotspot-5" aria-hidden="true">5</span>
+              <span class="hotspot hotspot-6" aria-hidden="true">6</span>
+              <span class="hotspot hotspot-7" aria-hidden="true">7</span>
+            </div>
+            <figcaption>번호가 표시된 영역을 기준으로 화면의 주요 기능을 확인합니다.</figcaption>
+          </figure>
+          <ol class="numbered-guide">
+            <li>
+              <strong>모듈 라이브러리</strong>
+              <p>배치할 수 있는 전통 건축 부재, 자연 요소, 공간 소품을 썸네일로 확인합니다.</p>
+            </li>
+            <li>
+              <strong>검색과 카테고리</strong>
+              <p>이름 검색 또는 카테고리 선택으로 필요한 에셋만 좁혀서 봅니다.</p>
+            </li>
+            <li>
+              <strong>공간 프리셋</strong>
+              <p><code>한옥 마당</code>, <code>사랑채</code>, <code>조선 장터</code>, <code>전통 정원</code> 분위기를 전환합니다.</p>
+            </li>
+            <li>
+              <strong>3D 뷰포트</strong>
+              <p>건축물과 배치한 에셋을 직접 보고, 장면 안의 항목을 선택합니다.</p>
+            </li>
+            <li>
+              <strong>조작 툴바</strong>
+              <p>이동, 회전, 크기, 삭제, 초기화, 캡처 같은 빠른 작업을 실행합니다.</p>
+            </li>
+            <li>
+              <strong>배치 편집 패널</strong>
+              <p>선택한 에셋의 위치, 회전, 크기를 숫자와 버튼으로 세밀하게 조정합니다.</p>
+            </li>
+            <li>
+              <strong>추천 입력창</strong>
+              <p>원하는 장면을 문장으로 입력해 관련 에셋 추천과 자동 배치를 요청합니다.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="doc-section" id="controls" data-title="기본 조작">
+          <p class="eyebrow">Controls</p>
+          <h2>기본 조작</h2>
+          <p>
+            뷰포트 조작은 Unity Scene View에 익숙한 사용자가 쉽게 적응할 수 있도록 구성되어 있습니다.
+            아래 조작은 현재 프로젝트에서 확인된 항목입니다.
+          </p>
+          <table class="doc-table compact">
+            <tbody>
+              <tr>
+                <th>시점 회전</th>
+                <td>마우스 오른쪽 드래그 또는 <code>Alt</code> + 왼쪽 드래그</td>
+              </tr>
+              <tr>
+                <th>화면 이동</th>
+                <td>마우스 가운데 드래그 또는 <code>Shift</code> + 오른쪽 드래그</td>
+              </tr>
+              <tr>
+                <th>확대와 축소</th>
+                <td>마우스 휠</td>
+              </tr>
+              <tr>
+                <th>카메라 이동</th>
+                <td><code>W</code>, <code>A</code>, <code>S</code>, <code>D</code>, <code>Q</code>, <code>E</code></td>
+              </tr>
+              <tr>
+                <th>선택 항목 집중</th>
+                <td><code>F</code></td>
+              </tr>
+              <tr>
+                <th>전체 보기</th>
+                <td><code>Z</code></td>
+              </tr>
+              <tr>
+                <th>선택 해제</th>
+                <td><code>Esc</code></td>
+              </tr>
+              <tr>
+                <th>복제와 삭제</th>
+                <td><code>Ctrl</code> + <code>D</code>, <code>Delete</code> 또는 <code>Backspace</code></td>
+              </tr>
+              <tr>
+                <th>캡처</th>
+                <td><code>P</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="doc-section" id="library" data-title="모듈 라이브러리">
+          <p class="eyebrow">Module Library</p>
+          <h2>모듈 라이브러리에서 에셋 선택하기</h2>
+          <div class="media-row">
+            <figure class="doc-figure">
+              <img
+                src="assets/screenshots/module-library.png"
+                alt="썸네일 형태로 정렬된 모듈 라이브러리 화면"
+              />
+              <figcaption>썸네일과 사용자용 이름을 보고 에셋을 선택합니다.</figcaption>
+            </figure>
+            <div>
+              <p>
+                모듈 라이브러리는 사용자가 배치할 수 있는 부재와 소품을 한곳에 모아 보여주는 영역입니다.
+                검색창과 카테고리 버튼을 함께 사용하면 원하는 에셋을 빠르게 찾을 수 있습니다.
+              </p>
+              <ul class="plain-list">
+                <li>검색창에 이름 일부를 입력하면 목록이 좁혀집니다.</li>
+                <li>카테고리를 선택하면 관련 에셋만 표시됩니다.</li>
+                <li>썸네일을 클릭하면 해당 에셋이 장면에 추가됩니다.</li>
+                <li>썸네일 아래 이름은 사용자가 이해하기 쉬운 표시 이름을 기준으로 보여야 합니다.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="editing" data-title="배치 편집">
+          <p class="eyebrow">Placement Editing</p>
+          <h2>배치 편집 패널 사용하기</h2>
+          <div class="media-row">
+            <figure class="doc-figure">
+              <img
+                src="assets/screenshots/edit-panel.png"
+                alt="선택한 에셋의 위치, 회전, 크기를 조정하는 오른쪽 배치 편집 패널"
+              />
+              <figcaption>오른쪽 패널에서 선택한 에셋의 위치, 회전, 크기를 조정합니다.</figcaption>
+            </figure>
+            <div>
+              <p>
+                최신 배치 편집 패널은 선택한 에셋의 이름을 먼저 보여주고,
+                위치와 회전 값을 축별로 조정할 수 있도록 구성되어 있습니다.
+                작은 <code>-</code>, <code>+</code> 버튼은 값을 조금씩 바꿀 때 사용합니다.
+              </p>
+              <table class="doc-table compact">
+                <tbody>
+                  <tr>
+                    <th>위치</th>
+                    <td>X, Y, Z 값을 입력하거나 축별 <code>-</code>, <code>+</code> 버튼으로 좌표를 조정합니다.</td>
+                  </tr>
+                  <tr>
+                    <th>회전</th>
+                    <td>X, Y, Z 회전값을 조정하고, 회전 단위 선택값에 맞춰 방향을 맞춥니다.</td>
+                  </tr>
+                  <tr>
+                    <th>크기</th>
+                    <td>배율 입력 또는 0.5x, 1x, 2x, 3x 버튼으로 크기를 조절합니다.</td>
+                  </tr>
+                  <tr>
+                    <th>빠른 작업</th>
+                    <td>복제, 삭제, 선택 해제를 실행합니다.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="small-note">입력 필드는 <code>Tab</code> 키로 다음 항목으로 이동할 수 있습니다.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="recommendation" data-title="추천 배치">
+          <p class="eyebrow">Recommendation</p>
+          <h2>문장으로 에셋 추천받기</h2>
+          <figure class="doc-figure is-wide">
+            <img
+              src="assets/screenshots/recommendation-normal.png"
+              alt="하단 추천 입력창이 표시된 프로그램 화면"
+            />
+            <figcaption>
+              하단 입력창에 만들고 싶은 장면을 문장으로 입력합니다.
+            </figcaption>
+          </figure>
+          <p>
+            화면 하단의 입력창은 원하는 장면을 자연어로 설명하는 영역입니다.
+            예를 들어 “수원 화성처럼 만들어줘”와 같이 입력하면 프로그램이 관련 에셋을 찾고,
+            가능한 경우 장면에 배치하는 흐름을 제공합니다.
+          </p>
+          <ol class="procedure-list">
+            <li>
+              <strong>장면 설명 입력</strong>
+              <p>하단 입력창에 만들고 싶은 분위기나 필요한 에셋을 문장으로 입력합니다.</p>
+            </li>
+            <li>
+              <strong>전송</strong>
+              <p><code>전송</code> 버튼을 누르면 프로그램이 입력 문장을 기준으로 관련 에셋을 찾습니다.</p>
+            </li>
+            <li>
+              <strong>추천 결과 확인</strong>
+              <p>추천된 에셋이 표시되면 이름과 썸네일을 확인하고 필요한 항목을 선택합니다.</p>
+            </li>
+            <li>
+              <strong>배치 후 조정</strong>
+              <p>자동으로 배치된 항목은 오른쪽 배치 편집 패널에서 위치, 회전, 크기를 다시 맞춥니다.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="doc-section" id="capture" data-title="캡처">
+          <p class="eyebrow">Capture</p>
+          <h2>현재 화면 저장하기</h2>
+          <p>
+            조작 툴바의 캡처 버튼 또는 <code>P</code> 키를 사용하면 현재 장면을 이미지로 저장할 수 있습니다.
+            저장된 이미지는 배치 결과를 공유하거나 작업 과정을 기록할 때 사용할 수 있습니다.
+          </p>
+          <div class="callout">
+            <strong>권장 사용 흐름</strong>
+            <p>
+              원하는 프리셋을 고르고, 에셋을 배치한 뒤, 카메라 시점을 조정하고 캡처하세요.
+              화면 중앙에 건축물과 배치한 소품이 함께 보이도록 맞추면 결과를 확인하기 쉽습니다.
+            </p>
+          </div>
+        </section>
+
+        <section class="doc-section" id="troubleshooting" data-title="문제 해결">
+          <p class="eyebrow">Troubleshooting</p>
+          <h2>문제 발생 시 확인할 사항</h2>
+          <div class="faq-list">
+            <details open>
+              <summary>모듈 라이브러리에 썸네일이 보이지 않습니다.</summary>
+              <p>
+                화면이 처음 열리는 동안에는 일부 이미지가 늦게 표시될 수 있습니다.
+                잠시 기다린 뒤에도 비어 있다면 프로그램에 포함된 에셋 리소스 상태를 확인해야 합니다.
+              </p>
+            </details>
+            <details>
+              <summary>화면이 깨져 보이거나 글자가 이상하게 표시됩니다.</summary>
+              <p>
+                폰트 에셋과 TextMesh Pro 리소스가 정상 import되었는지 확인하세요.
+                경고가 계속되면 Console에서 누락된 문자 또는 폰트 이름을 확인합니다.
+              </p>
+            </details>
+            <details>
+              <summary>추천 배치 기능이 작동하지 않습니다.</summary>
+              <p>
+                입력 문장을 더 구체적으로 작성해보세요. 계속 결과가 나오지 않으면 추천 기능 설정이 준비되어 있는지 확인해야 합니다.
+              </p>
+            </details>
+            <details>
+              <summary>배치한 에셋을 다시 찾기 어렵습니다.</summary>
+              <p>
+                Hierarchy에서 선택하거나, 뷰포트에서 에셋을 클릭한 뒤 <code>F</code> 키로 해당 위치에 초점을 맞춥니다.
+              </p>
+            </details>
+            <details>
+              <summary>이동이나 회전 조작이 어렵습니다.</summary>
+              <p>
+                오른쪽 배치 편집 패널의 숫자 입력을 먼저 사용해보세요.
+                마우스 조작보다 정확하게 값을 맞출 수 있습니다.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        <section class="doc-section" id="scope" data-title="확인 범위">
+          <p class="eyebrow">Version Notes</p>
+          <h2>문서 확인 범위</h2>
+          <p>
+            이 문서는 <code>Unity-3D_Korean_Traditional_Architecture</code> 프로젝트의
+            <code>feature/add-asset</code> 기준 실행 화면과 확인된 UI 흐름을 바탕으로 작성되었습니다.
+          </p>
+          <div class="scope-grid">
+            <article>
+              <h3>확인된 기능</h3>
+              <ul class="plain-list">
+                <li>3D 체험 화면과 공간 프리셋 확인</li>
+                <li>모듈 라이브러리 에셋 선택과 썸네일 표시</li>
+                <li>3D 뷰포트 탐색</li>
+                <li>선택 에셋 위치, 회전, 크기 조정</li>
+                <li>추천 입력창과 추천 배치 흐름</li>
+                <li>화면 캡처</li>
+              </ul>
+            </article>
+            <article>
+              <h3>추후 보완 필요</h3>
+              <ul class="plain-list">
+                <li>배포용 실행 파일 제공 여부</li>
+                <li>추천 기능 설정 상태에 따른 사용자 안내</li>
+                <li>저장과 불러오기 기능의 최종 사용자 흐름</li>
+                <li>VR, AR, 멀티플레이, 계정 기능 여부</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="toc" aria-label="문서 정보">
+        <p>이 페이지</p>
+        <a href="#overview">개요</a>
+        <a href="#interface">화면 구성</a>
+        <a href="#controls">기본 조작</a>
+        <a href="#library">모듈 라이브러리</a>
+        <a href="#editing">배치 편집</a>
+        <a href="#recommendation">추천 배치</a>
+        <a href="#troubleshooting">문제 해결</a>
+      </aside>
+    </div>
+
+    <button class="sidebar-backdrop" type="button" aria-label="문서 메뉴 닫기" hidden></button>
+    <script src="script.js"></script>
+  </body>
+</html>
