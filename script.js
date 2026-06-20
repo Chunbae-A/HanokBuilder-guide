@@ -70,9 +70,18 @@ document.querySelectorAll(".tab-group").forEach((group) => {
   });
 });
 
-/* ── FAQ: prevent default marker, custom toggle ── */
-document.querySelectorAll(".faq-list details summary").forEach((summary) => {
-  summary.addEventListener("click", (e) => {
-    // native <details> handles toggle, just prevent double-fire
+/* ── FAQ accordion ── */
+// native <details> handles toggle natively — no extra JS needed
+
+/* ── App embed: hide loader on iframe load ── */
+const hanokFrame = document.getElementById("hanok-frame");
+const appLoader = document.getElementById("app-loader");
+if (hanokFrame && appLoader) {
+  hanokFrame.addEventListener("load", () => {
+    appLoader.classList.add("hidden");
+    // remove from DOM after transition
+    setTimeout(() => appLoader.remove(), 500);
   });
-});
+  // fallback: hide loader after 60s even if iframe doesn't fire load
+  setTimeout(() => appLoader.classList.add("hidden"), 60000);
+}
