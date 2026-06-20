@@ -40,6 +40,8 @@
         </div>
         <nav class="sidebar-nav">
           <a href="#overview" class="active">개요</a>
+          <a href="#try" class="nav-highlight">▶ 바로 체험하기</a>
+          <div class="nav-divider"></div>
           <a href="#interface">화면 구성</a>
           <a href="#workflow">시작 흐름</a>
           <a href="#backgrounds">배경 프리셋</a>
@@ -127,6 +129,50 @@
               <dd>게임 개발자·인디 팀, 교육자·학생, 웹툰 작가, 메타버스 기획자, 박물관·문화기관</dd>
             </div>
           </dl>
+        </section>
+
+        <!-- ── 바로 체험하기 ── -->
+        <section class="doc-section" id="try" data-title="바로 체험하기">
+          <span class="eyebrow">Live Demo</span>
+          <h2>바로 체험하기</h2>
+          <p>설치 없이 브라우저에서 HanokBuilder를 직접 실행할 수 있습니다.</p>
+
+          <div class="app-embed">
+            <div class="app-embed-header">
+              <div class="app-embed-title">
+                <span class="app-dot" aria-hidden="true"></span>
+                <span class="app-dot" aria-hidden="true"></span>
+                <span class="app-dot" aria-hidden="true"></span>
+                <span class="app-embed-url">HanokBuilder — WebGL</span>
+              </div>
+              <div class="app-embed-actions">
+                <a href="https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="app-launch-btn">
+                  새 탭에서 열기 ↗
+                </a>
+              </div>
+            </div>
+            <div class="app-embed-viewport">
+              <div class="app-loader" id="app-loader">
+                <div class="app-loader-spinner" aria-hidden="true"></div>
+                <p>HanokBuilder 로딩 중...</p>
+              </div>
+              <iframe
+                id="hanok-frame"
+                src="https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/"
+                title="HanokBuilder 실행 화면"
+                allow="fullscreen"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="callout callout-tip" data-icon="💡">
+            <strong>권장 환경</strong>
+            <p>최신 Chrome · Firefox · Edge 브라우저에서 가장 원활하게 동작합니다. 처음 로딩 시 Unity WebGL 에셋을 다운로드하므로 수 초~수십 초가 소요될 수 있습니다.</p>
+          </div>
         </section>
 
         <!-- ── 화면 구성 ── -->
@@ -745,6 +791,7 @@
       <aside class="toc" aria-label="이 페이지 목차">
         <p>이 페이지</p>
         <a href="#overview">개요</a>
+        <a href="#try" class="toc-highlight">▶ 바로 체험하기</a>
         <a href="#interface">화면 구성</a>
         <a href="#workflow">시작 흐름</a>
         <a href="#backgrounds">배경 프리셋</a>
