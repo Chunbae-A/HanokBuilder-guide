@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Platform-WebGL-E44D26?style=flat-square" alt="WebGL">
   <img src="https://img.shields.io/badge/AI-Claude%20Haiku-6B5B95?style=flat-square" alt="Claude Haiku">
   <img src="https://img.shields.io/badge/Render-URP-3C4A5E?style=flat-square" alt="URP">
-  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
+  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Gitaction">
   <img src="https://img.shields.io/badge/Data-문화포털%20메타버스데이터랩-2E7D59?style=flat-square" alt="Culture Data">
 </p>
 
