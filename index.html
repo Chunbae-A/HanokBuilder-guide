@@ -49,7 +49,8 @@
           <a href="#controls">카메라 조작</a>
           <a href="#tools">편집 도구</a>
           <a href="#editpanel">부재 정보 패널</a>
-          <a href="#ai">AI 추천</a>
+          <a href="#ai">AI 기능</a>
+          <a href="#guide-panel">문화재 해설</a>
           <a href="#capture">캡처</a>
           <a href="#shortcuts">단축키 전체</a>
           <a href="#troubleshooting">문제 해결</a>
@@ -108,6 +109,21 @@
               <strong>PNG 캡처</strong>
               <p>UI 패널 제외, 뷰포트 화면만 바탕화면에 날짜·시간 파일명으로 저장</p>
             </div>
+            <div class="feature-card">
+              <div class="feature-icon">🗺</div>
+              <strong>AI 자동 레이아웃</strong>
+              <p>테마 한 줄로 Claude가 건물·자연물을 단계적으로 배치해 완성형 씬을 자동 설계</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">💬</div>
+              <strong>자연어 씬 편집</strong>
+              <p>"사랑채를 동쪽으로 5m 이동해줘" — 대화 맥락을 기억하며 씬을 직접 수정</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🏛</div>
+              <strong>문화재 해설</strong>
+              <p>건물 클릭 시 Claude가 역사·건축·문화 맥락을 담은 3문장 해설을 즉시 생성</p>
+            </div>
           </div>
 
           <!-- Specs -->
@@ -118,7 +134,7 @@
             </div>
             <div>
               <dt>AI 기능</dt>
-              <dd>Claude Haiku API — 자연어 프롬프트로 에셋 카탈로그에서 최대 30개 추천</dd>
+              <dd>Claude Haiku API — 에셋 추천 · AI 자동 레이아웃 · 자연어 씬 편집 · 문화재 해설 4가지 모드</dd>
             </div>
             <div>
               <dt>에셋 원천</dt>
@@ -228,8 +244,8 @@
               <p>선택 에셋 이름·위치·회전·크기 수치 확인 및 조정.</p>
             </li>
             <li>
-              <strong>AI 추천 프롬프트 바</strong>
-              <p>자연어 입력 시 관련 에셋 최대 30개 추천 및 배치.</p>
+              <strong>AI 프롬프트 바</strong>
+              <p>[맵]·[씬] 모드 토글 및 자연어 입력. 에셋 추천·자동 레이아웃·자연어 씬 편집 기능 전환.</p>
             </li>
           </ol>
         </section>
@@ -250,8 +266,8 @@
               <p>좌측 라이브러리에서 카테고리를 탐색하거나 검색창에 키워드를 입력합니다. 썸네일 클릭 시 뷰포트 중앙에 즉시 배치됩니다.</p>
             </li>
             <li>
-              <strong>AI로 에셋 발견</strong>
-              <p>하단 프롬프트 바에 원하는 장면을 입력합니다. 예: <em>"나무로 둘러싸인 집"</em>, <em>"조선 장터 상인과 소품"</em>. 결과를 클릭하면 즉시 배치됩니다.</p>
+              <strong>AI로 에셋 발견 · 씬 구성</strong>
+              <p>하단 프롬프트 바에 원하는 장면을 입력합니다. 예: <em>"나무로 둘러싸인 집"</em>. 결과를 클릭하면 즉시 배치됩니다. <kbd>맵</kbd> 버튼으로 테마 기반 자동 설계, <kbd>씬</kbd> 버튼으로 자연어 직접 편집도 가능합니다.</p>
             </li>
             <li>
               <strong>배치 편집</strong>
@@ -548,55 +564,206 @@
           </div>
         </section>
 
-        <!-- ── AI 추천 ── -->
-        <section class="doc-section" id="ai" data-title="AI 추천">
-          <span class="eyebrow">AI Recommendation</span>
-          <h2>AI 에셋 추천</h2>
-
-          <figure class="doc-figure is-wide">
-            <img src="assets/screenshots/recommendation-normal.png" alt="하단 AI 추천 프롬프트 바" />
-            <figcaption>하단 프롬프트 바에 원하는 장면을 자연어로 입력합니다.</figcaption>
-          </figure>
-
+        <!-- ── AI 기능 ── -->
+        <section class="doc-section" id="ai" data-title="AI 기능">
+          <span class="eyebrow">AI Features</span>
+          <h2>AI 기능</h2>
           <p>
-            화면 하단 중앙의 프롬프트 바에 원하는 분위기를 입력하면 Claude Haiku 모델이 에셋 카탈로그에서
-            최대 30개를 추천합니다. 결과는 프롬프트 바 위 가로 스크롤 목록으로 표시되며, 클릭 시 즉시 배치됩니다.
+            화면 하단 중앙 프롬프트 바에서 3가지 AI 모드를 선택해 씬을 구성할 수 있습니다.
+            모두 Claude Haiku 모델을 사용하며, API 키 설정이 필요합니다.
           </p>
 
-          <h3>입력 예시</h3>
+          <figure class="doc-figure is-wide">
+            <img src="assets/screenshots/recommendation-normal.png" alt="하단 AI 프롬프트 바 — [맵] [씬] 모드 토글과 입력 필드" />
+            <figcaption>프롬프트 바 좌측 [맵] · [씬] 버튼으로 모드를 전환합니다.</figcaption>
+          </figure>
+
+          <div class="callout callout-gold" data-icon="🔑">
+            <strong>API 키 설정</strong>
+            <p>첫 실행 시 API 키 입력 모달이 자동으로 나타납니다. 이후에는 프롬프트 바 우측 <kbd>⚙</kbd> 버튼으로 언제든 변경할 수 있습니다. <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer">console.anthropic.com</a>에서 발급한 키(<code>sk-ant-…</code>)를 붙여넣으세요. 키는 기기 내부에만 저장됩니다. 키 없이도 키워드 기반 로컬 추천이 자동 작동합니다.</p>
+          </div>
+
+          <h3>프롬프트 바 구조</h3>
           <table class="doc-table">
             <tbody>
-              <tr><td><em>"나무로 둘러싸인 집"</em></td><td>→ 수목·정자·담장 관련 에셋 추천</td></tr>
-              <tr><td><em>"조선 장터 상인과 바구니, 깃발"</em></td><td>→ 행상인·전통 수레·깃발 추천</td></tr>
-              <tr><td><em>"아치형 대문 주변 풍경"</em></td><td>→ 문·기와·돌담 관련 에셋 추천</td></tr>
+              <tr>
+                <th class="narrow"><kbd>맵</kbd></th>
+                <td>AI 자동 레이아웃 모드 — 테마 입력 시 Claude가 건물·자연물을 단계적으로 배치</td>
+              </tr>
+              <tr>
+                <th><kbd>씬</kbd></th>
+                <td>자연어 씬 편집 모드 — 자연어 명령으로 배치된 오브젝트를 이동·회전·배치·삭제</td>
+              </tr>
+              <tr>
+                <th>기본 (토글 없음)</th>
+                <td>AI 에셋 추천 — 관련 에셋 최대 30개 추천, 클릭 시 즉시 배치</td>
+              </tr>
+              <tr>
+                <th><kbd>⚙</kbd></th>
+                <td>API 키 설정 패널 열기</td>
+              </tr>
             </tbody>
           </table>
 
-          <h3>작동 방식</h3>
+          <!-- 모드 1: 에셋 추천 -->
+          <h3>AI 에셋 추천 <span style="font-weight:400;color:var(--subtle);font-size:0.82rem">(기본 모드)</span></h3>
+          <p>모드 토글 없이 자연어를 입력하면 Claude가 에셋 카탈로그에서 최대 30개를 추천합니다. 결과는 프롬프트 바 위 가로 스크롤 목록으로 표시되며, 클릭 시 즉시 배치됩니다.</p>
+
           <table class="doc-table">
+            <thead><tr><th>입력 예시</th><th>추천 결과</th></tr></thead>
             <tbody>
-              <tr>
-                <th class="narrow">모델</th>
-                <td>Claude Haiku — 카탈로그 매칭처럼 정형화된 작업에 최적화된 속도·비용 효율</td>
-              </tr>
-              <tr>
-                <th>추천 범위</th>
-                <td>현재 등록된 에셋 카탈로그 내부로만 제한. 존재하지 않는 에셋은 추천하지 않습니다.</td>
-              </tr>
-              <tr>
-                <th>응답 형식</th>
-                <td>구조화된 JSON으로 반환. <code>assetKey</code>가 Unity 에셋과 자동 매칭됩니다.</td>
-              </tr>
-              <tr>
-                <th>오프라인 대체</th>
-                <td>API 키 미설정 시 키워드 기반 로컬 추천이 자동 작동합니다.</td>
-              </tr>
+              <tr><td><em>"나무로 둘러싸인 집"</em></td><td>수목·정자·담장 관련 에셋</td></tr>
+              <tr><td><em>"조선 장터 상인과 바구니, 깃발"</em></td><td>행상인·전통 수레·깃발 에셋</td></tr>
+              <tr><td><em>"아치형 대문 주변 풍경"</em></td><td>문·기와·돌담 관련 에셋</td></tr>
             </tbody>
           </table>
 
           <div class="callout callout-tip" data-icon="ℹ️">
             <strong>AI는 에셋을 자동 배치하지 않습니다</strong>
-            <p>AI는 후보 에셋을 추천하고, 사용자가 목록에서 직접 선택해 배치합니다. 탐색 진입장벽을 낮추는 보조 기능입니다.</p>
+            <p>추천 목록에서 직접 클릭해야 배치됩니다. 탐색 진입장벽을 낮추는 보조 기능입니다. API 키 미설정 시 키워드 기반 로컬 추천이 자동으로 작동합니다.</p>
+          </div>
+
+          <!-- 모드 2: AI 자동 레이아웃 -->
+          <h3>[맵] AI 자동 레이아웃</h3>
+          <p>
+            <kbd>맵</kbd> 버튼을 활성화한 뒤 테마를 입력하면 Claude가 최대 20턴에 걸쳐 건물과 자연물을
+            단계적으로 배치해 완성형 씬을 설계합니다. 배치 후 겹침이 감지되면 자동으로 다른 좌표를 선택합니다.
+          </p>
+
+          <table class="doc-table">
+            <thead><tr><th>입력 예시</th><th>설계 결과</th></tr></thead>
+            <tbody>
+              <tr><td><em>"소규모 양반가 안채 배치"</em></td><td>건물 2~4개 + 자연물 6~10개</td></tr>
+              <tr><td><em>"사찰 중심 — 주불전, 종루, 소나무"</em></td><td>사찰 구조 + 소나무군</td></tr>
+              <tr><td><em>"밀도 높은 조선 시장 번화가"</em></td><td>건물 10~14개 + 자연물 12~18개</td></tr>
+              <tr><td><em>"대규모 궁궐 배치"</em></td><td>건물 13~18개 + 자연물 15~25개</td></tr>
+            </tbody>
+          </table>
+
+          <table class="doc-table" style="margin-top:12px">
+            <tbody>
+              <tr>
+                <th class="narrow">밀도 기준</th>
+                <td>조용한/소규모 → 건물 2~4개 · 일반 마을 → 5~7개 · 밀도 높음 → 10~14개 · 대규모/궁궐 → 13~18개</td>
+              </tr>
+              <tr>
+                <th>설계 완료 표시</th>
+                <td>AI 추천 결과 패널 헤더에 "완성! [설계 해설]" 문구로 표시됩니다.</td>
+              </tr>
+              <tr>
+                <th>진행 중 표시</th>
+                <td>패널 헤더에 "AI가 설계 중…" / "수정 중…" 상태가 순서대로 표시됩니다.</td>
+              </tr>
+              <tr>
+                <th>모드 종료</th>
+                <td><kbd>맵</kbd> 버튼 재클릭으로 비활성화합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-tip" data-icon="💡">
+            <strong>한국 전통 건축 테마 키워드</strong>
+            <p>양반가·사찰·관아·서원·시장·정원·마을 키워드를 사용하면 테마의 건축적·문화적 규칙에 따라 배치합니다. 설계 완료 후 개별 에셋을 수동으로 추가·이동하거나 <kbd>씬</kbd> 모드로 자연어 편집하여 세부 조정이 가능합니다.</p>
+          </div>
+
+          <!-- 모드 3: 자연어 씬 편집 -->
+          <h3>[씬] 자연어 씬 편집</h3>
+          <p>
+            <kbd>씬</kbd> 버튼을 활성화하면 중앙 하단에 채팅 인터페이스가 열립니다. 씬에 배치된
+            오브젝트를 자연어로 직접 수정할 수 있으며, 이전 대화를 기억해 "그거", "방금 배치한 것"
+            같은 문맥 표현도 인식합니다.
+          </p>
+
+          <table class="doc-table">
+            <thead><tr><th>명령 예시</th><th>동작</th></tr></thead>
+            <tbody>
+              <tr><td><em>"사랑채를 동쪽으로 5m 옮겨줘"</em></td><td>해당 건물 X축 +5m 이동</td></tr>
+              <tr><td><em>"처마를 45도 회전해줘"</em></td><td>선택 오브젝트 Y축 45도 회전</td></tr>
+              <tr><td><em>"정자 삭제해줘"</em></td><td>정자 오브젝트 씬에서 제거</td></tr>
+              <tr><td><em>"연못 하나 추가해줘"</em></td><td>연못 에셋을 카메라 중심에 배치</td></tr>
+              <tr><td><em>"그걸 더 북쪽으로 이동해줘"</em></td><td>직전 대상 오브젝트 Z축 이동</td></tr>
+            </tbody>
+          </table>
+
+          <table class="doc-table" style="margin-top:12px">
+            <tbody>
+              <tr>
+                <th class="narrow">방향 기준</th>
+                <td>동쪽 = +X &nbsp;·&nbsp; 서쪽 = −X &nbsp;·&nbsp; 남쪽 = −Z &nbsp;·&nbsp; 북쪽 = +Z</td>
+              </tr>
+              <tr>
+                <th>대화 히스토리</th>
+                <td>세션 동안 대화 맥락 유지. "그거", "방금 것" 같은 지시어 인식 가능.</td>
+              </tr>
+              <tr>
+                <th>결과 확인</th>
+                <td>명령 실행 후 채팅 패널에 작업 요약이 말풍선으로 표시됩니다.</td>
+              </tr>
+              <tr>
+                <th>모드 종료</th>
+                <td><kbd>씬</kbd> 버튼 재클릭으로 채팅 패널이 닫힙니다.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-tip" data-icon="💡">
+            <strong>맵 + 씬 모드 조합 활용</strong>
+            <p><kbd>맵</kbd> 모드로 전체 구조를 잡은 뒤 <kbd>씬</kbd> 모드로 세부 위치를 조정하는 흐름이 가장 효율적입니다. 씬 편집 중에도 에셋 라이브러리에서 직접 추가 배치가 가능합니다.</p>
+          </div>
+        </section>
+
+        <!-- ── 문화재 해설 ── -->
+        <section class="doc-section" id="guide-panel" data-title="문화재 해설">
+          <span class="eyebrow">Cultural Guide</span>
+          <h2>문화재 해설 패널</h2>
+          <p>
+            뷰포트에서 건물이나 에셋을 클릭하면 Claude가 해당 건축물의 역사적 배경·건축 특징·문화적 의미를
+            담은 3문장 해설을 자동으로 생성해 말풍선 형태로 표시합니다.
+          </p>
+
+          <h3>패널 상태</h3>
+          <table class="doc-table">
+            <thead>
+              <tr><th>상태</th><th>표시 형태</th><th>전환 방법</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Expanded</strong></td>
+                <td>건물 위 말풍선 — 제목(금색)·해설 본문 3문장 전체 표시</td>
+                <td>에셋 클릭 시 기본 상태 / Collapsed pill 클릭</td>
+              </tr>
+              <tr>
+                <td><strong>Collapsed</strong></td>
+                <td>건물 위 작은 pill — "▸ 건물명"만 표시</td>
+                <td>말풍선 [−] 접기 버튼 클릭</td>
+              </tr>
+              <tr>
+                <td><strong>Hidden</strong></td>
+                <td>표시 없음</td>
+                <td>말풍선 [✕] 닫기 클릭 (같은 에셋 재클릭 시에도 Hidden 유지)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>사용 방법</h3>
+          <ol class="procedure-list">
+            <li>
+              <strong>에셋 클릭</strong>
+              <p>뷰포트에서 건물이나 에셋을 클릭합니다. Claude API 호출이 즉시 시작됩니다.</p>
+            </li>
+            <li>
+              <strong>해설 확인</strong>
+              <p>잠시 후 건물 위에 말풍선이 나타납니다. 역사·건축·문화 맥락을 담은 3문장이 표시됩니다.</p>
+            </li>
+            <li>
+              <strong>패널 관리</strong>
+              <p>[−]으로 pill 상태로 줄이거나 [✕]로 닫습니다. 다른 에셋을 클릭하면 새 해설이 생성됩니다.</p>
+            </li>
+          </ol>
+
+          <div class="callout callout-tip" data-icon="ℹ️">
+            <strong>해설은 에셋마다 실시간으로 생성됩니다</strong>
+            <p>Claude Haiku 모델이 건물 이름과 카테고리를 기반으로 문화재 큐레이터 관점의 해설을 생성합니다. API 키가 설정되어 있어야 작동합니다. 마크다운 없는 완결된 문단 형식으로 표시됩니다.</p>
           </div>
         </section>
 
@@ -713,6 +880,18 @@
               </div>
             </details>
             <details>
+              <summary>[맵] AI 자동 레이아웃이 응답하지 않거나 너무 오래 걸립니다</summary>
+              <div class="faq-body">
+                <kbd>맵</kbd> 모드는 최대 20턴의 반복 API 호출로 씬을 설계하므로 규모에 따라 수십 초가 소요될 수 있습니다. "AI가 설계 중…" 표시가 나타나면 정상 진행 중입니다. 응답이 없다면 API 키를 확인하고, 네트워크 연결 상태를 점검하세요. 입력을 더 구체적으로 작성하거나 규모를 줄이는 것도 도움이 됩니다. 예: <em>"대규모 궁궐"</em> → <em>"소규모 양반가"</em>
+              </div>
+            </details>
+            <details>
+              <summary>[씬] 자연어 편집 명령이 올바르게 실행되지 않습니다</summary>
+              <div class="faq-body">
+                씬에 오브젝트가 하나 이상 배치되어 있어야 합니다. 명령에 오브젝트 이름을 명확히 포함하세요. 예: <em>"오브젝트 이동"</em> → <em>"사랑채를 동쪽으로 3m 이동해줘"</em>. 방향은 동(+X)·서(−X)·남(−Z)·북(+Z) 기준입니다. 에셋 추가 시 카탈로그에 없는 이름이면 배치되지 않습니다. 채팅 패널의 AI 응답 메시지에서 구체적인 오류 원인을 확인할 수 있습니다.
+              </div>
+            </details>
+            <details>
               <summary>에셋이 화면에 보이지 않거나 엉뚱한 위치에 있습니다</summary>
               <div class="faq-body">
                 <kbd>Z</kbd>키로 전체 보기를 시도합니다. 에셋이 카메라 범위 밖에 있을 수 있습니다. 우측 패널에서 위치를 X=0, Y=0, Z=0으로 직접 입력하거나, 라이브러리에서 해당 에셋을 다시 클릭해 재배치하세요.
@@ -799,7 +978,8 @@
         <a href="#controls">카메라 조작</a>
         <a href="#tools">편집 도구</a>
         <a href="#editpanel">부재 정보 패널</a>
-        <a href="#ai">AI 추천</a>
+        <a href="#ai">AI 기능</a>
+        <a href="#guide-panel">문화재 해설</a>
         <a href="#capture">캡처</a>
         <a href="#shortcuts">단축키 전체</a>
         <a href="#troubleshooting">문제 해결</a>
