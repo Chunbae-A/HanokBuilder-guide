@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Platform-WebGL-E44D26?style=flat-square" alt="WebGL">
   <img src="https://img.shields.io/badge/AI-Claude%20Haiku-6B5B95?style=flat-square" alt="Claude Haiku">
   <img src="https://img.shields.io/badge/Render-URP-3C4A5E?style=flat-square" alt="URP">
-  <img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub Pages">
+  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=Gitaction&logoColor=white" alt="Gitaction">
   <img src="https://img.shields.io/badge/Data-문화포털%20메타버스데이터랩-2E7D59?style=flat-square" alt="Culture Data">
 </p>
 
@@ -18,7 +18,7 @@
 전문 3D 소프트웨어 지식 없이도 국가 문화공공데이터 기반 에셋을 배치하고, Claude AI로 씬을 구성하며, PNG로 결과를 저장할 수 있습니다.
 
 **Guide** · https://chunbae-a.github.io/HanokBuilder-guide/  
-**App** · https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/
+**App** · 추가 예정
 
 ---
 
@@ -253,7 +253,7 @@ API 키는 [console.anthropic.com](https://console.anthropic.com)에서 발급(`
 | 마크업 | HTML5 (의미론적 태그, ARIA) |
 | 스타일 | CSS3 (CSS 변수 기반 디자인 토큰, 다크 모드 지원) |
 | 스크립트 | Vanilla JavaScript (IntersectionObserver, 탭, 아코디언) |
-| 배포 | GitHub Actions + GitHub Pages (main 브랜치 push 시 자동 배포) |
+| 배포 | Vercel (main 브랜치 push 시 자동 배포) |
 | 반응형 | 3단계 브레이크포인트 (1200px / 900px / 560px) |
 | 의존성 | 없음 (외부 프레임워크 · 라이브러리 미사용) |
 
@@ -292,33 +292,21 @@ python -m http.server 8080
 
 ## 10. 배포
 
-main 브랜치에 push하면 GitHub Actions가 자동으로 GitHub Pages에 배포합니다. 별도 빌드 없이 루트의 `index.html`을 그대로 서빙합니다.
+main 브랜치에 push하면 Vercel이 자동으로 배포합니다. 별도 빌드 설정 없이 루트의 `index.html`을 그대로 서빙합니다.
 
-```yaml
-# .github/workflows/deploy-pages.yml
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - uses: actions/deploy-pages@v4
+```json
+// vercel.json
+{
+  "cleanUrls": true,
+  "outputDirectory": "."
+}
 ```
 
 ---
 
 ## 11. 데이터 출처
 
-에셋 라이브러리는 국가기관이 공개한 문화공공데이터를 원천으로 합니다.
+에셋 라이브러리는 국가기관이 공개한 [문화공공데이터](https://www.culture.go.kr/datametaverse)를 원천으로 합니다.
 
 | 데이터 | 제공 기관 | 플랫폼 |
 | --- | --- | --- |
