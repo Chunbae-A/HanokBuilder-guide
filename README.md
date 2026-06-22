@@ -18,7 +18,7 @@
 전문 3D 소프트웨어 지식 없이도 국가 문화공공데이터 기반 에셋을 배치하고, Claude AI로 씬을 구성하며, PNG로 결과를 저장할 수 있습니다.
 
 **Guide** · https://chunbae-a.github.io/HanokBuilder-guide/  
-**App** · https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/
+**App** · 추가 예정
 
 ---
 
