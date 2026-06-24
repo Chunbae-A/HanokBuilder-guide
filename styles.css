@@ -827,6 +827,48 @@ p:last-child { margin-bottom: 0; }
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ─── Download card ─── */
+.download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  margin-top: 12px;
+}
+.download-card-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.download-card-info strong { display: block; font-size: 0.95rem; color: var(--text); }
+.download-card-info p { margin: 3px 0 0; font-size: 0.8rem; color: var(--muted); }
+.download-icon { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.48rem 1.1rem;
+  border-radius: var(--radius-sm);
+  background: var(--brand);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.download-btn:hover { opacity: 0.85; }
+[data-theme="dark"] .download-btn { color: #0d1117; }
+@media (max-width: 560px) {
+  .download-card { flex-direction: column; align-items: flex-start; }
+  .download-btn { width: 100%; justify-content: center; }
+}
+
 /* ─── Mobile backdrop ─── */
 .sidebar-backdrop {
   position: fixed;
