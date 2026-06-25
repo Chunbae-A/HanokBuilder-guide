@@ -90,9 +90,9 @@
               <p>자연어 입력 한 줄로 Claude Haiku가 최대 30개 관련 에셋 즉시 추천</p>
             </div>
             <div class="feature-card">
-              <div class="feature-icon">🏯</div>
+              <div class="feature-icon">🌅</div>
               <strong>4가지 배경 프리셋</strong>
-              <p>한옥 마당 · 사랑채 · 조선 장터 · 전통 정원 — 원클릭 전환</p>
+              <p>맑은날 · 저녁노을 · 밤 · 자연 — 원클릭 전환으로 분위기 즉시 변경</p>
             </div>
             <div class="feature-card">
               <div class="feature-icon">🛠</div>
@@ -253,7 +253,7 @@
             </li>
             <li>
               <strong>배경 프리셋 패널</strong>
-              <p>한옥 마당 · 사랑채 · 조선 장터 · 전통 정원 4가지 전환.</p>
+              <p>맑은날 · 저녁노을 · 밤 · 자연 4가지 하늘·분위기 전환.</p>
             </li>
             <li>
               <strong>3D 뷰포트</strong>
@@ -278,7 +278,7 @@
         <section class="doc-section" id="workflow" data-title="시작 흐름">
           <span class="eyebrow">Quick Start</span>
           <h2>처음 시작하는 5단계</h2>
-          <p>실행하면 한옥 마당 배경이 자동 생성됩니다. 아래 순서대로 따라가 보세요.</p>
+          <p>실행하면 맑은날 배경이 자동 설정됩니다. 아래 순서대로 따라가 보세요.</p>
 
           <ol class="procedure-list">
             <li>
@@ -316,38 +316,74 @@
           <p>화면 상단 중앙 패널에서 전환합니다. 배경은 교체되지만 사용자가 배치한 에셋은 그대로 유지됩니다.</p>
 
           <figure class="doc-figure is-wide">
-            <img src="assets/screenshots/background-presets-demo.png" alt="4가지 배경 프리셋 버튼과 AI 자동 배치 결과" />
-            <figcaption>상단 중앙 버튼으로 한옥 날 · 저녁노을 · 밤 · 자연 4가지 배경을 전환합니다.</figcaption>
+            <img src="assets/screenshots/background-presets-demo.png" alt="4가지 배경 프리셋 버튼과 씬 전환 결과" />
+            <figcaption>상단 중앙 버튼으로 맑은날 · 저녁노을 · 밤 · 자연 4가지 분위기를 즉시 전환합니다.</figcaption>
           </figure>
 
-          <table class="doc-table">
+          <div class="preset-grid">
+            <div class="preset-card">
+              <div class="preset-icon">☀️</div>
+              <div class="preset-info">
+                <strong>맑은날</strong>
+                <span class="badge">기본</span>
+                <p>청명한 낮 하늘 아래 햇살이 내리쬐는 화창한 환경</p>
+                <p class="preset-use">일반 배치 작업, 에셋 색감·디테일 확인</p>
+              </div>
+            </div>
+            <div class="preset-card">
+              <div class="preset-icon">🌇</div>
+              <div class="preset-info">
+                <strong>저녁노을</strong>
+                <p>붉은 노을이 하늘을 물들이는 따뜻한 황혼 분위기</p>
+                <p class="preset-use">드라마틱한 구도 캡처, 감성적 씬 연출</p>
+              </div>
+            </div>
+            <div class="preset-card">
+              <div class="preset-icon">🌙</div>
+              <div class="preset-info">
+                <strong>밤</strong>
+                <p>별이 빛나는 어두운 밤하늘과 고요한 야간 분위기</p>
+                <p class="preset-use">야간 씬 레퍼런스, 조명 효과 강조 장면</p>
+              </div>
+            </div>
+            <div class="preset-card">
+              <div class="preset-icon">🌿</div>
+              <div class="preset-info">
+                <strong>자연</strong>
+                <p>녹음이 우거진 자연 속 한옥 풍경의 싱그러운 환경</p>
+                <p class="preset-use">자연물·수목 배치, 정원·경관 구성</p>
+              </div>
+            </div>
+          </div>
+
+          <table class="doc-table" style="margin-top:24px">
             <thead>
               <tr>
                 <th>프리셋</th>
-                <th>공간 특징</th>
+                <th>분위기 특징</th>
                 <th>추천 활용</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>한옥 마당</strong> <span class="badge">기본</span></td>
-                <td>조선시대 한옥 마당 분위기의 야외 공간</td>
-                <td>일반 배치 테스트, 전체 구성 확인</td>
+                <td><strong>☀️ 맑은날</strong> <span class="badge">기본</span></td>
+                <td>청명한 낮 햇살 — 에셋 색감과 디테일이 가장 잘 보임</td>
+                <td>일반 배치 작업, 전체 구성 확인</td>
               </tr>
               <tr>
-                <td><strong>사랑채</strong></td>
-                <td>전통 사랑방 구조의 실내 공간</td>
-                <td>실내 소품 배치, 교육 자료 제작</td>
+                <td><strong>🌇 저녁노을</strong></td>
+                <td>붉은 황혼 빛 — 따뜻하고 드라마틱한 분위기</td>
+                <td>감성적 씬 연출, 캡처 구도 연습</td>
               </tr>
               <tr>
-                <td><strong>조선 장터</strong></td>
-                <td>노점과 행인이 오가는 시장 분위기</td>
-                <td>상인·소품·캐릭터 배치, 게임 씬 레퍼런스</td>
+                <td><strong>🌙 밤</strong></td>
+                <td>어두운 밤하늘과 별빛 — 고요하고 신비로운 야간 환경</td>
+                <td>야간 씬 레퍼런스, 조명 강조 장면</td>
               </tr>
               <tr>
-                <td><strong>전통 정원</strong></td>
-                <td>연못·정자·수목이 어우러진 외부 정원</td>
-                <td>자연 요소 배치, 경관 구성</td>
+                <td><strong>🌿 자연</strong></td>
+                <td>녹음 짙은 자연 환경 — 생동감 있는 풍경 연출</td>
+                <td>자연물·수목 배치, 정원·경관 구성</td>
               </tr>
             </tbody>
           </table>
