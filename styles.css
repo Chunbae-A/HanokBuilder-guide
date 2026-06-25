@@ -609,6 +609,11 @@ p:last-child { margin-bottom: 0; }
   align-items: start;
   margin-top: 18px;
 }
+.media-row .doc-figure img {
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top;
+}
 
 /* ─── Plain list ─── */
 .plain-list {
