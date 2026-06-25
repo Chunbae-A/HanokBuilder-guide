@@ -774,36 +774,19 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
 }
 
-/* ─── Video placeholder ─── */
-.video-placeholder {
-  aspect-ratio: 16 / 9;
-  background: var(--surface-alt);
-  border: 2px dashed var(--line);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ─── Video wrap ─── */
+.video-wrap {
   margin: 24px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #000;
 }
-.video-placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  color: var(--subtle);
-}
-.video-placeholder-inner p { margin: 0; font-size: 0.9rem; }
-.video-play-icon {
-  width: 60px;
-  height: 60px;
-  border: 2px solid var(--line);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  padding-left: 4px;
-  color: var(--subtle);
+.video-wrap video {
+  display: block;
+  width: 100%;
+  max-height: 540px;
+  object-fit: contain;
 }
 
 /* ─── Preset screenshots grid ─── */
