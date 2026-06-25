@@ -40,7 +40,7 @@
         </div>
         <nav class="sidebar-nav">
           <a href="#overview" class="active">개요</a>
-          <a href="#try" class="nav-highlight">▶ 바로 체험하기</a>
+          <a href="#try" class="nav-highlight">▶ 시뮬레이션 영상</a>
           <div class="nav-divider"></div>
           <a href="#interface">화면 구성</a>
           <a href="#workflow">시작 흐름</a>
@@ -147,71 +147,17 @@
           </dl>
         </section>
 
-        <!-- ── 바로 체험하기 ── -->
-        <section class="doc-section" id="try" data-title="바로 체험하기">
-          <span class="eyebrow">Live Demo</span>
-          <h2>바로 체험하기</h2>
-          <p>설치 없이 브라우저에서 HanokBuilder를 직접 실행할 수 있습니다.</p>
+        <!-- ── 시뮬레이션 영상 ── -->
+        <section class="doc-section" id="try" data-title="시뮬레이션 영상">
+          <span class="eyebrow">Preview</span>
+          <h2>시뮬레이션 영상</h2>
+          <p>HanokBuilder의 주요 기능과 작업 흐름을 영상으로 확인할 수 있습니다.</p>
 
-          <div class="app-embed">
-            <div class="app-embed-header">
-              <div class="app-embed-title">
-                <span class="app-dot" aria-hidden="true"></span>
-                <span class="app-dot" aria-hidden="true"></span>
-                <span class="app-dot" aria-hidden="true"></span>
-                <span class="app-embed-url">HanokBuilder — WebGL</span>
-              </div>
-              <div class="app-embed-actions">
-                <a href="https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="app-launch-btn">
-                  새 탭에서 열기 ↗
-                </a>
-              </div>
+          <div class="video-placeholder">
+            <div class="video-placeholder-inner">
+              <div class="video-play-icon" aria-hidden="true">▶</div>
+              <p>시뮬레이션 영상 준비 중입니다</p>
             </div>
-            <div class="app-embed-viewport">
-              <div class="app-loader" id="app-loader">
-                <div class="app-loader-spinner" aria-hidden="true"></div>
-                <p>HanokBuilder 로딩 중...</p>
-              </div>
-              <iframe
-                id="hanok-frame"
-                src="https://chunbae-a.github.io/Unity-3D_Korean_Traditional_Architecture/"
-                title="HanokBuilder 실행 화면"
-                allow="fullscreen"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="callout callout-tip" data-icon="💡">
-            <strong>권장 환경</strong>
-            <p>최신 Chrome · Firefox · Edge 브라우저에서 가장 원활하게 동작합니다. 처음 로딩 시 Unity WebGL 에셋을 다운로드하므로 수 초~수십 초가 소요될 수 있습니다.</p>
-          </div>
-
-          <h3 style="margin-top:36px">Windows 데스크톱 버전 다운로드</h3>
-          <p>브라우저 외에 고성능 Windows PC 환경에서 실행할 수 있는 데스크톱 빌드를 제공합니다.</p>
-
-          <div class="download-card">
-            <div class="download-card-info">
-              <div class="download-icon" aria-hidden="true">🏯</div>
-              <div>
-                <strong>HanokBuilder_Windows.zip</strong>
-                <p>Windows 64-bit · Unity 6 (6000.3.16f1) · URP</p>
-              </div>
-            </div>
-            <a href="https://drive.google.com/drive/folders/1gCTwTNuJAuEa3ueKQiMCqAYTLsg8wmWK?usp=drive_link"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="download-btn">
-              Google Drive에서 받기 ↗
-            </a>
-          </div>
-
-          <div class="callout callout-tip" data-icon="ℹ️" style="margin-top:12px">
-            <strong>설치 방법</strong>
-            <p>zip 파일을 원하는 폴더에 압축 해제한 뒤 <code>Gungbang.exe</code>를 실행하세요. 별도 설치 과정 없이 바로 구동됩니다.</p>
           </div>
         </section>
 
@@ -315,10 +261,24 @@
           <h2>배경 프리셋</h2>
           <p>화면 상단 중앙 패널에서 전환합니다. 배경은 교체되지만 사용자가 배치한 에셋은 그대로 유지됩니다.</p>
 
-          <figure class="doc-figure is-wide">
-            <img src="assets/screenshots/background-presets-demo.png" alt="4가지 배경 프리셋 버튼과 씬 전환 결과" />
-            <figcaption>상단 중앙 버튼으로 맑은날 · 저녁노을 · 밤 · 자연 4가지 분위기를 즉시 전환합니다.</figcaption>
-          </figure>
+          <div class="preset-screenshots">
+            <figure class="doc-figure">
+              <img src="assets/screenshots/freeset1.png" alt="맑은날 배경 프리셋 — 청명한 낮 하늘과 햇살" />
+              <figcaption>☀️ 맑은날</figcaption>
+            </figure>
+            <figure class="doc-figure">
+              <img src="assets/screenshots/freeset2.png" alt="저녁노을 배경 프리셋 — 붉은 황혼 분위기" />
+              <figcaption>🌇 저녁노을</figcaption>
+            </figure>
+            <figure class="doc-figure">
+              <img src="assets/screenshots/freeset3.png" alt="밤 배경 프리셋 — 어두운 밤하늘과 별빛" />
+              <figcaption>🌙 밤</figcaption>
+            </figure>
+            <figure class="doc-figure">
+              <img src="assets/screenshots/freeset4.png" alt="자연 배경 프리셋 — 녹음 우거진 자연 풍경" />
+              <figcaption>🌿 자연</figcaption>
+            </figure>
+          </div>
 
           <div class="preset-grid">
             <div class="preset-card">
@@ -1070,7 +1030,7 @@
       <aside class="toc" aria-label="이 페이지 목차">
         <p>이 페이지</p>
         <a href="#overview">개요</a>
-        <a href="#try" class="toc-highlight">▶ 바로 체험하기</a>
+        <a href="#try" class="toc-highlight">▶ 시뮬레이션 영상</a>
         <a href="#interface">화면 구성</a>
         <a href="#workflow">시작 흐름</a>
         <a href="#backgrounds">배경 프리셋</a>
