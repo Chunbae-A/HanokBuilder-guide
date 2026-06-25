@@ -369,20 +369,20 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.outline-1 { top: 12%; left: 7.2%; width: 22.1%; height: 68%; }
-.outline-2 { top: 22%; left: 8.8%; width: 18.4%; height: 12%; }
-.outline-3 { top: 15%; left: 51.2%; width: 25%; height: 8.7%; }
-.outline-4 { top: 14%; left: 29.7%; width: 45.5%; height: 64%; }
-.outline-5 { top: 34.5%; left: 33.3%; width: 5.3%; height: 31.5%; }
-.outline-6 { top: 14%; left: 75.5%; width: 17.5%; height: 67%; }
-.outline-7 { top: 84%; left: 48%; width: 34%; height: 6%; }
-.hotspot-1 { top: 11%; left: 7.2%; }
-.hotspot-2 { top: 22%; left: 26.2%; }
-.hotspot-3 { top: 14%; left: 49.5%; }
-.hotspot-4 { top: 43%; left: 51%; }
-.hotspot-5 { top: 33%; left: 32%; }
-.hotspot-6 { top: 13.2%; left: 74%; }
-.hotspot-7 { top: 82%; left: 46.5%; }
+.outline-1 { top: 0%;   left: 0%;    width: 22%;   height: 100%; }
+.outline-2 { top: 5%;   left: 1%;    width: 20%;   height: 16%;  }
+.outline-3 { top: 0%;   left: 23%;   width: 47%;   height: 8%;   }
+.outline-4 { top: 8%;   left: 22%;   width: 57%;   height: 83%;  }
+.outline-5 { top: 23%;  left: 22%;   width: 5%;    height: 57%;  }
+.outline-6 { top: 0%;   left: 79%;   width: 21%;   height: 100%; }
+.outline-7 { top: 91%;  left: 22%;   width: 57%;   height: 9%;   }
+.hotspot-1 { top: 0.5%;  left: 0.5%;  }
+.hotspot-2 { top: 4.5%;  left: 0.5%;  }
+.hotspot-3 { top: -0.5%; left: 21.5%; }
+.hotspot-4 { top: 7.5%;  left: 20.5%; }
+.hotspot-5 { top: 22%;   left: 20.5%; }
+.hotspot-6 { top: 0.5%;  left: 77.5%; }
+.hotspot-7 { top: 90%;   left: 20.5%; }
 
 /* ─── Numbered guide (interface cards) ─── */
 .numbered-guide {

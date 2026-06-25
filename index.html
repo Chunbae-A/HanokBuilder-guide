@@ -315,6 +315,11 @@
           <h2>배경 프리셋</h2>
           <p>화면 상단 중앙 패널에서 전환합니다. 배경은 교체되지만 사용자가 배치한 에셋은 그대로 유지됩니다.</p>
 
+          <figure class="doc-figure is-wide">
+            <img src="assets/screenshots/background-presets-demo.png" alt="4가지 배경 프리셋 버튼과 AI 자동 배치 결과" />
+            <figcaption>상단 중앙 버튼으로 한옥 날 · 저녁노을 · 밤 · 자연 4가지 배경을 전환합니다.</figcaption>
+          </figure>
+
           <table class="doc-table">
             <thead>
               <tr>
@@ -524,6 +529,22 @@
             </tbody>
           </table>
 
+          <div class="media-row" style="margin-top:18px">
+            <figure class="doc-figure">
+              <img src="assets/screenshots/move-tool-demo.png" alt="이동 도구 — 선택 핸들과 위치 표시" />
+              <figcaption>이동(1) 도구 — 드래그로 에셋 위치를 조정합니다.</figcaption>
+            </figure>
+            <figure class="doc-figure">
+              <img src="assets/screenshots/rotation-demo.png" alt="회전 도구 — 저녁노을 배경에서 Y축 270도 회전" />
+              <figcaption>회전(2) 도구 — 우측 패널에서 X·Y·Z 값을 직접 입력하거나 드래그로 회전합니다.</figcaption>
+            </figure>
+          </div>
+
+          <figure class="doc-figure is-wide" style="margin-top:14px">
+            <img src="assets/screenshots/size-adjust-demo.png" alt="크기 조정 — AI 맵 모드에서 자동 scale 적용 결과" />
+            <figcaption>크기(3) 도구 또는 우측 패널 배율 버튼(0.5× · 1× · 2× · 3×)으로 에셋 크기를 조정합니다.</figcaption>
+          </figure>
+
           <h3>추가 단축키</h3>
           <table class="doc-table">
             <tbody>
@@ -597,11 +618,6 @@
             모두 Claude Haiku 모델을 사용하며, API 키 설정이 필요합니다.
           </p>
 
-          <figure class="doc-figure is-wide">
-            <img src="assets/screenshots/ai-asset-recommendation.png" alt="AI 추천 결과 — 프롬프트 바와 추천 에셋 목록" />
-            <figcaption>프롬프트 바 좌측 [맵] · [씬] 버튼으로 모드를 전환합니다.</figcaption>
-          </figure>
-
           <div class="callout callout-gold" data-icon="🔑">
             <strong>API 키 설정</strong>
             <p>첫 실행 시 API 키 입력 모달이 자동으로 나타납니다. 이후에는 프롬프트 바 우측 <kbd>⚙</kbd> 버튼으로 언제든 변경할 수 있습니다. <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer">console.anthropic.com</a>에서 발급한 키(<code>sk-ant-…</code>)를 붙여넣으세요. 키는 기기 내부에만 저장됩니다. 키 없이도 키워드 기반 로컬 추천이 자동 작동합니다.</p>
@@ -637,6 +653,11 @@
           <!-- 모드 1: 에셋 추천 -->
           <h3>AI 에셋 추천 <span style="font-weight:400;color:var(--subtle);font-size:0.82rem">(기본 모드)</span></h3>
           <p>모드 토글 없이 자연어를 입력하면 Claude가 에셋 카탈로그에서 최대 30개를 추천합니다. 결과는 프롬프트 바 위 가로 스크롤 목록으로 표시되며, 클릭 시 즉시 배치됩니다.</p>
+
+          <figure class="doc-figure is-wide">
+            <img src="assets/screenshots/ai-asset-recommendation.png" alt="AI 추천 결과 — 가로 스크롤 에셋 목록과 프롬프트 바" />
+            <figcaption>추천 에셋이 프롬프트 바 위 가로 스크롤 목록으로 표시됩니다. 클릭하면 즉시 배치됩니다.</figcaption>
+          </figure>
 
           <table class="doc-table">
             <thead><tr><th>입력 예시</th><th>추천 결과</th></tr></thead>
