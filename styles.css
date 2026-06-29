@@ -396,35 +396,6 @@ p:last-child { margin-bottom: 0; }
 }
 .annotation-stage img { width: 100%; }
 
-.outline, .hotspot { position: absolute; pointer-events: none; }
-.outline { border: 2px solid rgba(160,117,40,0.82); border-radius: 4px; background: rgba(255,248,230,0.04); }
-.hotspot {
-  display: grid;
-  width: 26px; height: 26px;
-  place-items: center;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: var(--brand);
-  color: #fff9ec;
-  font-size: 0.78rem;
-  font-weight: 900;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.outline-1 { top: 0%;   left: 0%;    width: 22%;   height: 100%; }
-.outline-2 { top: 5%;   left: 1%;    width: 20%;   height: 16%;  }
-.outline-3 { top: 0%;   left: 23%;   width: 47%;   height: 8%;   }
-.outline-4 { top: 8%;   left: 22%;   width: 57%;   height: 83%;  }
-.outline-5 { top: 23%;  left: 22%;   width: 5%;    height: 57%;  }
-.outline-6 { top: 0%;   left: 79%;   width: 21%;   height: 100%; }
-.outline-7 { top: 91%;  left: 22%;   width: 57%;   height: 9%;   }
-.hotspot-1 { top: 0.5%;  left: 0.5%;  }
-.hotspot-2 { top: 4.5%;  left: 0.5%;  }
-.hotspot-3 { top: -0.5%; left: 21.5%; }
-.hotspot-4 { top: 7.5%;  left: 20.5%; }
-.hotspot-5 { top: 22%;   left: 20.5%; }
-.hotspot-6 { top: 0.5%;  left: 77.5%; }
-.hotspot-7 { top: 90%;   left: 20.5%; }
 
 /* ─── Numbered guide (interface cards) ─── */
 .numbered-guide {
