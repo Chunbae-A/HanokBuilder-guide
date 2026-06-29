@@ -8,9 +8,8 @@
   <img src="https://img.shields.io/badge/Data-문화포털%20메타버스데이터랩-2E7D59?style=flat-square" alt="Culture Data">
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/workspace-overview.png" alt="HanokBuilder 실행 화면" width="100%">
-</p>
+<img width="2560" height="1440" alt="하이루" src="https://github.com/user-attachments/assets/dd4e7270-fe22-4b5b-9793-9b26b005a146" />
+
 
 한국 전통 건축 공간을 3D로 직접 조립하고 편집하는 인터랙티브 제작 도구 **HanokBuilder**의 공식 사용자 가이드 사이트입니다.
 
